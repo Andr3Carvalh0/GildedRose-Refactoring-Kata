@@ -1,7 +1,15 @@
 package com.gildedrose.dtos
 
+import com.gildedrose.dtos.base.BaseItem
+import com.gildedrose.utilities.toInt
+
 class NormalItem(
-    _name: String,
-    _sellIn: Int,
-    _quality: Int
-) : BaseItem(_name, _sellIn, _quality)
+    name: String,
+    sellIn: Int,
+    quality: Int
+) : BaseItem(name, sellIn, quality) {
+
+    override fun updateQuality() {
+        quality = quality - 1 - isExpired().toInt
+    }
+}

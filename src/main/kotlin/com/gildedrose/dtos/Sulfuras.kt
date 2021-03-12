@@ -1,9 +1,11 @@
 package com.gildedrose.dtos
 
+import com.gildedrose.dtos.base.LegendaryItem
+
 class Sulfuras(
-    _sellIn: Int,
-    _quality: Int
-) : BaseItem(NAME, _sellIn, _quality) {
+    sellIn: Int,
+    quality: Int
+) : LegendaryItem(NAME, sellIn, quality) {
     companion object {
         const val NAME = "Sulfuras, Hand of Ragnaros"
     }

@@ -1,6 +1,7 @@
 package com.gildedrose
 
 import com.gildedrose.utilities.toBaseItem
+import com.gildedrose.utilities.toItem
 
 /*
 * Notes:
@@ -14,11 +15,8 @@ class GildedRose(
 
     private fun refactoredUpdateQuality(items: Array<Item>): Array<Item> =
         items.map { e -> e.toBaseItem }
-            .onEach { e ->
-                updateSellBy(e)
-                updateQuantity(e)
-            }
-            .map { e -> Item(e.name, e.sellIn, e.quality) }
+            .onEach { e -> e.switchDay() }
+            .map { e -> e.toItem }
             .toTypedArray()
 
     fun updateQuality() {

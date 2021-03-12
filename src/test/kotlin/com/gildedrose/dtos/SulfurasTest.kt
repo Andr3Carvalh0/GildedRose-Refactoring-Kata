@@ -1,4 +1,4 @@
-package com.gildedrose.items
+package com.gildedrose.dtos
 
 import com.gildedrose.AMOUNT_OF_DAYS
 import com.gildedrose.GildedRose
