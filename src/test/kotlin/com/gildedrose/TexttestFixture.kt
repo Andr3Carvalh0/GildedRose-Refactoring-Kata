@@ -1,5 +1,12 @@
 package com.gildedrose
 
+private const val APPLY_FIX = false
+
+/*
+* Question: With the refactor, since we are just pointin to a newly created array instead of using this `items` references
+* meaning with the refactor the code will have different behaviour. (all the days will show the initial values)
+* Is this something thats important or nah?
+*/
 fun main(args: Array<String>) {
 
     println("OMGHAI!")
@@ -27,9 +34,13 @@ fun main(args: Array<String>) {
     for (i in 0..days - 1) {
         println("-------- day $i --------")
         println("name, sellIn, quality")
-        for (item in items) {
+
+        val inventory = if (APPLY_FIX) app.items else items
+
+        for (item in inventory) {
             println(item)
         }
+
         println()
         app.updateQuality()
     }

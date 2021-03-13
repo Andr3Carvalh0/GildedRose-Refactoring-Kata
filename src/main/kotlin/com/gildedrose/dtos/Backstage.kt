@@ -2,6 +2,7 @@ package com.gildedrose.dtos
 
 import com.gildedrose.dtos.base.BaseItem
 import com.gildedrose.utilities.toInt
+import kotlin.math.min
 
 private const val URGENT_DAY_MARK = 11
 private const val SUPER_URGENT_DAY_MARK = 6
@@ -18,8 +19,8 @@ class Backstage(
         quality = if (!isExpired()) {
             val modifier = 1 + isUrgent().toInt + isSuperUrgent().toInt
 
-            quality + (1 * modifier)
-        } else 0
+            min(MAX_QUALITY, quality + (1 * modifier))
+        } else MIN_QUALITY
     }
 
     private fun isUrgent(): Boolean = sellIn < URGENT_DAY_MARK

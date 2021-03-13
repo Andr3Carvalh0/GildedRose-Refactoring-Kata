@@ -40,4 +40,16 @@ class AgedBrieTest {
             Assertions.assertEquals(MAX_QUALITY, inn.items[0].quality)
         }
     }
+
+    @Test
+    fun `When brie item has 0 has quality it should increase`() {
+        val inn = GildedRose(
+            arrayOf(Item(ITEM_NAME, SUPER_URGENT_SELL_BY, 0))
+        )
+
+        for (i in 0 until AMOUNT_OF_DAYS) {
+            inn.updateQuality()
+            Assertions.assertEquals(i + 1, inn.items[0].quality)
+        }
+    }
 }

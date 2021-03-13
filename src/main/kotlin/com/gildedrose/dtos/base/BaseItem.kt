@@ -1,13 +1,20 @@
 package com.gildedrose.dtos.base
 
-private const val MIN_QUALITY = 0
-private const val MAX_QUALITY = 50
-
 abstract class BaseItem(
-    var name: String,
-    var sellIn: Int,
-    var quality: Int
+    val name: String,
+    sellIn: Int,
+    quality: Int
 ) {
+    companion object {
+        const val MIN_QUALITY = 0
+        const val MAX_QUALITY = 50
+    }
+
+    var sellIn: Int = sellIn
+        protected set
+
+    var quality: Int = quality
+        protected set
 
     fun switchDay() {
         if (shouldUpdateQuality()) updateQuality()

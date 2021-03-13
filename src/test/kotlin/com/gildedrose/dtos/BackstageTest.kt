@@ -72,7 +72,7 @@ class BackstageTest {
     @Test
     fun `When backstage item its quality should never be higher than 50`() {
         val inn = GildedRose(
-            arrayOf(Item(ITEM_NAME, SUPER_URGENT_SELL_BY, MAX_QUALITY))
+            arrayOf(Item(ITEM_NAME, SUPER_URGENT_SELL_BY, MAX_QUALITY - 1))
         )
 
         for (i in 0 until AMOUNT_OF_DAYS) {

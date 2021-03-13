@@ -10,6 +10,8 @@ class AgedBrie(
         const val NAME = "Aged Brie"
     }
 
+    override fun shouldUpdateQuality(): Boolean = quality != MAX_QUALITY
+
     override fun updateQuality() {
         quality += 1
     }
