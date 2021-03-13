@@ -20,6 +20,6 @@ class GildedRose(
             .toTypedArray()
 
     fun updateQuality() {
-        items = refactoredUpdateQuality(items)
+        refactoredUpdateQuality(items)
     }
 }

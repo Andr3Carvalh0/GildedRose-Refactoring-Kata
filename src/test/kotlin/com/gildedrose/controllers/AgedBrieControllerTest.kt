@@ -1,4 +1,4 @@
-package com.gildedrose.dtos
+package com.gildedrose.controllers
 
 import com.gildedrose.AMOUNT_OF_DAYS
 import com.gildedrose.GildedRose
@@ -7,7 +7,7 @@ import com.gildedrose.QUALITY
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class AgedBrieTest {
+class AgedBrieControllerTest {
 
     companion object {
         const val ITEM_NAME = "Aged Brie"

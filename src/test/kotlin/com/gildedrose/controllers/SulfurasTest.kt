@@ -1,4 +1,4 @@
-package com.gildedrose.dtos
+package com.gildedrose.controllers
 
 import com.gildedrose.AMOUNT_OF_DAYS
 import com.gildedrose.GildedRose

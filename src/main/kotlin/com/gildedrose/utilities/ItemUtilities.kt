@@ -1,12 +1,12 @@
 package com.gildedrose.utilities
 
 import com.gildedrose.Item
-import com.gildedrose.dtos.AgedBrie
-import com.gildedrose.dtos.Backstage
-import com.gildedrose.dtos.Conjured
-import com.gildedrose.dtos.NormalItem
-import com.gildedrose.dtos.Sulfuras
-import com.gildedrose.dtos.base.BaseItem
+import com.gildedrose.controllers.AgedBrieController
+import com.gildedrose.controllers.Backstage
+import com.gildedrose.controllers.Conjured
+import com.gildedrose.controllers.NormalItemController
+import com.gildedrose.controllers.Sulfuras
+import com.gildedrose.controllers.base.BaseItemController
 
 /*
 * For short amount of items, a when is fine.
@@ -17,12 +17,12 @@ import com.gildedrose.dtos.base.BaseItem
 val Item.toBaseItem
     get() =
         when (name.toLowerCase()) {
-            AgedBrie.NAME.toLowerCase() -> AgedBrie(sellIn, quality)
-            Backstage.NAME.toLowerCase() -> Backstage(sellIn, quality)
-            Conjured.NAME.toLowerCase() -> Conjured(sellIn, quality)
-            Sulfuras.NAME.toLowerCase() -> Sulfuras(sellIn, quality)
-            else -> NormalItem(name, sellIn, quality)
+            AgedBrieController.NAME.toLowerCase() -> AgedBrieController(this)
+            Backstage.NAME.toLowerCase() -> Backstage(this)
+            Conjured.NAME.toLowerCase() -> Conjured(this)
+            Sulfuras.NAME.toLowerCase() -> Sulfuras(this)
+            else -> NormalItemController(this)
         }
 
-val BaseItem.toItem
-    get() = Item(name, sellIn, quality)
+val BaseItemController.toItem
+    get() = this.item

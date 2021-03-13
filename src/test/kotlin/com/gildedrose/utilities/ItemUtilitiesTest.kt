@@ -1,11 +1,11 @@
 package com.gildedrose.utilities
 
 import com.gildedrose.Item
-import com.gildedrose.dtos.AgedBrie
-import com.gildedrose.dtos.Backstage
-import com.gildedrose.dtos.Conjured
-import com.gildedrose.dtos.NormalItem
-import com.gildedrose.dtos.Sulfuras
+import com.gildedrose.controllers.AgedBrieController
+import com.gildedrose.controllers.Backstage
+import com.gildedrose.controllers.Conjured
+import com.gildedrose.controllers.NormalItemController
+import com.gildedrose.controllers.Sulfuras
 import com.gildedrose.randomizeCapitalization
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -14,18 +14,18 @@ class ItemUtilitiesTest {
 
     @Test
     fun `When Item is AgedBrie the toBaseItem extension returns an AgedBrie instance`() {
-        val item = Item(AgedBrie.NAME, 0, 0)
+        val item = Item(AgedBrieController.NAME, 0, 0)
 
-        Assertions.assertEquals(true, item.toBaseItem is AgedBrie)
+        Assertions.assertEquals(true, item.toBaseItem is AgedBrieController)
     }
 
     @Test
     fun `When Item is AgedBrie the toBaseItem extension returns an AgedBrie instance no matter the case sensitivity`() {
         listOf(
-            Item(AgedBrie.NAME.randomizeCapitalization(), 0, 0),
-            Item(AgedBrie.NAME.toLowerCase(), 0, 0)
+            Item(AgedBrieController.NAME.randomizeCapitalization(), 0, 0),
+            Item(AgedBrieController.NAME.toLowerCase(), 0, 0)
         ).forEach {
-            Assertions.assertEquals(true, it.toBaseItem is AgedBrie)
+            Assertions.assertEquals(true, it.toBaseItem is AgedBrieController)
         }
     }
 
@@ -86,7 +86,7 @@ class ItemUtilitiesTest {
             Item("+5 Dexterity Vest", 0, 0),
             Item("Elixir of the Mongoose", 0, 0)
         ).forEach {
-            Assertions.assertEquals(true, it.toBaseItem is NormalItem)
+            Assertions.assertEquals(true, it.toBaseItem is NormalItemController)
         }
     }
 }
