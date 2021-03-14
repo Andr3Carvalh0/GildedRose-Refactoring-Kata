@@ -9,10 +9,10 @@ import com.gildedrose.SELL_BY
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class ConjuredTest {
+class ConjuredControllerTest {
 
     companion object {
-        const val ITEM_NAME = "Conjured Mana Cake"
+        const val ITEM_NAME = ConjuredController.NAME
     }
 
     @Test

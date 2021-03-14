@@ -2,10 +2,10 @@ package com.gildedrose.utilities
 
 import com.gildedrose.Item
 import com.gildedrose.controllers.AgedBrieController
-import com.gildedrose.controllers.Backstage
-import com.gildedrose.controllers.Conjured
+import com.gildedrose.controllers.BackstageController
+import com.gildedrose.controllers.ConjuredController
 import com.gildedrose.controllers.NormalItemController
-import com.gildedrose.controllers.Sulfuras
+import com.gildedrose.controllers.SulfurasController
 import com.gildedrose.randomizeCapitalization
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -31,52 +31,52 @@ class ItemUtilitiesTest {
 
     @Test
     fun `When Item is Backstage the toBaseItem extension returns an Backstage instance`() {
-        val item = Item(Backstage.NAME, 0, 0)
+        val item = Item(BackstageController.NAME, 0, 0)
 
-        Assertions.assertEquals(true, item.toBaseItem is Backstage)
+        Assertions.assertEquals(true, item.toBaseItem is BackstageController)
     }
 
     @Test
     fun `When Item is Backstage the toBaseItem extension returns an Backstage instance no matter the case sensitivity`() {
         listOf(
-            Item(Backstage.NAME.randomizeCapitalization(), 0, 0),
-            Item(Backstage.NAME.toLowerCase(), 0, 0)
+            Item(BackstageController.NAME.randomizeCapitalization(), 0, 0),
+            Item(BackstageController.NAME.toLowerCase(), 0, 0)
         ).forEach {
-            Assertions.assertEquals(true, it.toBaseItem is Backstage)
+            Assertions.assertEquals(true, it.toBaseItem is BackstageController)
         }
     }
 
     @Test
     fun `When Item is Conjured the toBaseItem extension returns an Conjured instance`() {
-        val item = Item(Conjured.NAME, 0, 0)
+        val item = Item(ConjuredController.NAME, 0, 0)
 
-        Assertions.assertEquals(true, item.toBaseItem is Conjured)
+        Assertions.assertEquals(true, item.toBaseItem is ConjuredController)
     }
 
     @Test
     fun `When Item is Conjured the toBaseItem extension returns an Conjured instance no matter the case sensitivity`() {
         listOf(
-            Item(Conjured.NAME.randomizeCapitalization(), 0, 0),
-            Item(Conjured.NAME.toLowerCase(), 0, 0)
+            Item(ConjuredController.NAME.randomizeCapitalization(), 0, 0),
+            Item(ConjuredController.NAME.toLowerCase(), 0, 0)
         ).forEach {
-            Assertions.assertEquals(true, it.toBaseItem is Conjured)
+            Assertions.assertEquals(true, it.toBaseItem is ConjuredController)
         }
     }
 
     @Test
     fun `When Item is Sulfuras the toBaseItem extension returns an Sulfuras instance`() {
-        val item = Item(Sulfuras.NAME, 0, 0)
+        val item = Item(SulfurasController.NAME, 0, 0)
 
-        Assertions.assertEquals(true, item.toBaseItem is Sulfuras)
+        Assertions.assertEquals(true, item.toBaseItem is SulfurasController)
     }
 
     @Test
     fun `When Item is Sulfuras the toBaseItem extension returns an Sulfuras instance no matter the case sensitivity`() {
         listOf(
-            Item(Sulfuras.NAME.randomizeCapitalization(), 0, 0),
-            Item(Sulfuras.NAME.toLowerCase(), 0, 0)
+            Item(SulfurasController.NAME.randomizeCapitalization(), 0, 0),
+            Item(SulfurasController.NAME.toLowerCase(), 0, 0)
         ).forEach {
-            Assertions.assertEquals(true, it.toBaseItem is Sulfuras)
+            Assertions.assertEquals(true, it.toBaseItem is SulfurasController)
         }
     }
 

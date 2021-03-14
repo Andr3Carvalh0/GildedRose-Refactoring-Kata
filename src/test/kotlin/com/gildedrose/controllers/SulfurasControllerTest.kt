@@ -8,10 +8,10 @@ import com.gildedrose.SELL_BY
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class SulfurasTest {
+class SulfurasControllerTest {
 
     companion object {
-        const val ITEM_NAME = "Sulfuras, Hand of Ragnaros"
+        const val ITEM_NAME = SulfurasController.NAME
         const val EXPIRED_SELL_BY = -1
     }
 

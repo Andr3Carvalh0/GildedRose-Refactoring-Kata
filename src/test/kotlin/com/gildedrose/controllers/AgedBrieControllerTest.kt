@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 class AgedBrieControllerTest {
 
     companion object {
-        const val ITEM_NAME = "Aged Brie"
+        const val ITEM_NAME = AgedBrieController.NAME
         const val NORMAL_SELL_BY = 20
         const val SUPER_URGENT_SELL_BY = 5
         const val MAX_QUALITY = 50

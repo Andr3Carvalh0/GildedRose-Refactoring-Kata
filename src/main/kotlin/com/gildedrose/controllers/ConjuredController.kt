@@ -7,7 +7,7 @@ import kotlin.math.max
 private const val EXPIRED_QUALITY_MODIFIER = 4
 private const val QUALITY_MODIFIER = 2
 
-class Conjured(item: Item) : BaseItemController(item) {
+class ConjuredController(item: Item) : BaseItemController(item) {
 
     companion object {
         const val NAME = "Conjured Mana Cake"

@@ -8,7 +8,7 @@ import kotlin.math.min
 private const val URGENT_DAY_MARK = 11
 private const val SUPER_URGENT_DAY_MARK = 6
 
-class Backstage(item: Item) : BaseItemController(item) {
+class BackstageController(item: Item) : BaseItemController(item) {
 
     companion object {
         const val NAME = "Backstage passes to a TAFKAL80ETC concert"

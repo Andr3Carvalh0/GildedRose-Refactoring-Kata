@@ -8,10 +8,10 @@ import com.gildedrose.QUALITY
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class BackstageTest {
+class BackstageControllerTest {
 
     companion object {
-        const val ITEM_NAME = "Backstage passes to a TAFKAL80ETC concert"
+        const val ITEM_NAME = BackstageController.NAME
         const val NORMAL_SELL_BY = 20
         const val URGENT_SELL_BY = 10
         const val SUPER_URGENT_SELL_BY = 5
