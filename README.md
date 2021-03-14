@@ -2,7 +2,7 @@
 
 ## Notes
 
-I left some doubts/questions/notes on the code about some things I wasnt sure about. You can also find 2 branches `solution1` and `solution2` with 2 solutions for this problem.
+I left some doubts/questions/notes on the code about some things I wasnt sure about. You can also find 2 branches `solution` and `solution1` with 2 solutions for this problem. `solution1` isn't complete since i would need to touch some classes that am not sure I can.
 
 This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/).
 
